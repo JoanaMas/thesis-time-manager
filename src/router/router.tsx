@@ -8,15 +8,17 @@ import { routes } from './routes';
 
 export const router = createBrowserRouter([
     {
-        path: routes.homePage,
-        element: <HomePage />
-    },
-    {
-        path: routes.dashboardPage,
-        element: <Dashboard />
-    },
-    {
-        path: routes.blogPage,
-        element: <BlogPage />
+        path: '/',
+        element: <HomePage/>,
+        children: [
+            {
+                path: routes.dashboardPage,
+                element: <Dashboard />
+            },
+            {
+                path: routes.blogPage,
+                element: <BlogPage />
+            }
+        ]
     }
 ]);

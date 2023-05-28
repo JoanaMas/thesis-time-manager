@@ -1,4 +1,5 @@
 import { FC, ReactElement } from 'react';
+import { Outlet } from 'react-router-dom';
 // Sub components
 import Logo from './_logo/Logo';
 import Links from './_links/Links';

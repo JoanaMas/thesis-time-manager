@@ -1,4 +1,5 @@
 import { FC, ReactElement } from 'react';
+import { Outlet } from 'react-router-dom';
 // Redux
 // import { useAppSelector, useAppDispatch } from '../redux/hooks';
 // import { changeErrorMessage } from '../redux/features/errorSlice';
@@ -13,6 +14,7 @@ const HomePage: FC = (): ReactElement => {
   return (
     <div>
       <Navbar />
+      <Outlet/>
     </div>
   );
 };
