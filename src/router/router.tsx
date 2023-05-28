@@ -3,18 +3,20 @@ import { createBrowserRouter } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import Dashboard from '../pages/Dashboard';
 import BlogPage from '../pages/BlogPage';
+// Routes
+import { routes } from './routes';
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: routes.homePage,
         element: <HomePage />
     },
     {
-        path: '/time-management-dashboard',
+        path: routes.dashboardPage,
         element: <Dashboard />
     },
     {
-        path: '/blog',
+        path: routes.blogPage,
         element: <BlogPage />
     }
 ]);

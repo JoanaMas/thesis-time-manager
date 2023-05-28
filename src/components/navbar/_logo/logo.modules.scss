@@ -1,0 +1,16 @@
+@import '../../../main.scss';
+
+.logo {
+    @include flex-row;
+    gap: 8px;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    span {
+        font-family: $header-font;
+        font-weight: 400;
+        font-size: 16pt;
+    }
+}

@@ -1,23 +1,18 @@
 import { FC, ReactElement } from 'react';
 // Redux
-import { useAppSelector, useAppDispatch } from '../redux/hooks';
-import { changeErrorMessage } from '../redux/features/errorSlice';
-
+// import { useAppSelector, useAppDispatch } from '../redux/hooks';
+// import { changeErrorMessage } from '../redux/features/errorSlice';
+// Components
+import Navbar from '../components/navbar/Navbar';
 
 const HomePage: FC = (): ReactElement => {
 
-  const error = useAppSelector(state => state.error.error);
-  console.log(error);
+  // const error = useAppSelector(state => state.error.error);
 
-  const dispatch = useAppDispatch();
-  const changeError = () => {
-    dispatch(changeErrorMessage('Kaip sekasi?'));
-  };
 
   return (
-    <div>HomePage
-      {error}
-      <button onClick={changeError}>Click me</button>
+    <div>
+      <Navbar />
     </div>
   );
 };
