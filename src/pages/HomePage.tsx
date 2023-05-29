@@ -1,22 +1,22 @@
 import { FC, ReactElement } from 'react';
-import { Outlet } from 'react-router-dom';
 // Redux
 // import { useAppSelector, useAppDispatch } from '../redux/hooks';
 // import { changeErrorMessage } from '../redux/features/errorSlice';
+
 // Components
-import Navbar from '../components/navbar/Navbar';
+import Container from '../components/container/Container';
+import Header from '../components/header/Header';
 
 const HomePage: FC = (): ReactElement => {
+    // const error = useAppSelector(state => state.error.error);
 
-  // const error = useAppSelector(state => state.error.error);
-
-
-  return (
-    <div>
-      <Navbar />
-      <Outlet/>
-    </div>
-  );
+    return (
+        <div>
+            <Container>
+                <Header />
+            </Container>
+        </div>
+    );
 };
 
 export default HomePage;

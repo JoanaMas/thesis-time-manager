@@ -1,0 +1,65 @@
+@import '../../../main.scss';
+
+.title {
+    width: 50%;
+    align-self: center;
+    padding-left: 60px;
+    font-family: $prata-font;
+
+    h1 {
+        font-size: 40pt;
+
+        span {
+            background-color: $green;
+            color: $white;
+        }
+
+        &::selection {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    .navigation {
+        @include flex-row;
+        padding: 20px 0;
+        button {
+            background-color: $purple;
+            padding: 15px;
+            border-radius: 20px;
+            color: $white;
+        }
+
+        .social-icons {
+            @include flex-row;
+            gap: 20px;
+            color: $grey;
+
+            * {
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    .navigation-down {
+        padding-top: 100px;
+        animation: jumpInfinite 1.5s 1 ease-in-out;
+        color: $purple;
+    }
+}
+
+
+
+
+@keyframes jumpInfinite {
+    0% {
+      padding-top: 0;
+      color: $black;
+    }
+    100% {
+      padding-top: 100px;
+      color: $purple;
+    }
+  }
