@@ -4,8 +4,9 @@ import { FC, ReactElement } from 'react';
 // import { changeErrorMessage } from '../redux/features/errorSlice';
 
 // Components
-import Container from '../components/container/Container';
-import Header from '../components/header/Header';
+import Container from '../../components/container/Container';
+import Header from '../../components/header/Header';
+import FormSection from './_formSection/FormSection';
 
 const HomePage: FC = (): ReactElement => {
     // const error = useAppSelector(state => state.error.error);
@@ -14,6 +15,7 @@ const HomePage: FC = (): ReactElement => {
         <div>
             <Container>
                 <Header />
+                <FormSection/>
             </Container>
         </div>
     );

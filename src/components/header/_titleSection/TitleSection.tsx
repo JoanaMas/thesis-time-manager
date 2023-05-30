@@ -9,6 +9,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import './title.modules.scss';
 
 const TitleSection: FC = (): ReactElement => {
+
     return (
         <div className="title">
             <h1>
@@ -35,7 +36,7 @@ const TitleSection: FC = (): ReactElement => {
             </div>
 
             <div className="navigation-down">
-                <ArrowDownwardIcon />
+                <a href="#form-section"><ArrowDownwardIcon/></a>
             </div>
 
         </div>

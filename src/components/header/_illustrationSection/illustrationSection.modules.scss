@@ -1,0 +1,44 @@
+@import '../../../main.scss';
+
+.illustration {
+    width: 50%;
+    height: 100%;
+    align-self: center;
+    position: relative;
+    @include flex-row;
+    justify-content: center;
+
+    .header-image-container {
+        height: 550px;
+        width: 300px;
+        background-image: url('../../../assets/cover-illustration.jpg');
+        @include background-image;
+        background-position: 45% 20%;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            box-shadow: 4px 4px 21px -7px rgba(0, 0, 0, 0.71);
+            -webkit-box-shadow: 4px 4px 21px -7px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 4px 4px 21px -7px rgba(0, 0, 0, 0.71);
+        }
+
+        .sub-title-container {
+            position: absolute;
+            top: 420px;
+            @include flex-column-center;
+
+            h4 {
+                text-align: center;
+                font-weight: 400;
+    
+            }
+
+            span * {
+                font-size: 25pt;
+                color: $purple;
+            }
+        }
+    }
+
+}

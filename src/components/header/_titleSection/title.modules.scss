@@ -46,20 +46,25 @@
     .navigation-down {
         padding-top: 100px;
         animation: jumpInfinite 1.5s 1 ease-in-out;
-        color: $purple;
+
+        * {
+            color: $purple;
+        }
     }
+
+    @keyframes jumpInfinite {
+        0% {
+          padding-top: 0;
+          color: $black;
+        }
+        100% {
+          padding-top: 100px;
+          color: $purple;
+        }
+      }
+    
 }
 
 
 
 
-@keyframes jumpInfinite {
-    0% {
-      padding-top: 0;
-      color: $black;
-    }
-    100% {
-      padding-top: 100px;
-      color: $purple;
-    }
-  }

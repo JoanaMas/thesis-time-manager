@@ -1,4 +1,23 @@
+// Flex mixins
+
 @mixin flex-row {
     display: flex;
     align-items: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Backgroud mixins
+
+@mixin background-image {
+    border-radius: 100px;
+    background-color: $bg-ligther-color;
+    background-size: 700px 400px;
+    background-repeat: no-repeat;
 }
