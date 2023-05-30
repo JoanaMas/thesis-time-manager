@@ -12,6 +12,12 @@
     align-items: center;
 }
 
+// Grid mixins
+
+@mixin grid-center {
+    display: grid;
+    place-items: center;
+}
 
 // Backgroud mixins
 

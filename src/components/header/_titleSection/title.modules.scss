@@ -8,6 +8,7 @@
 
     h1 {
         font-size: 40pt;
+        margin-bottom: 20px;
 
         span {
             background-color: $green;
@@ -20,15 +21,13 @@
         }
     }
 
+    h5 {
+        margin-bottom: 30px;
+    }
+
     .navigation {
         @include flex-row;
         padding: 20px 0;
-        button {
-            background-color: $purple;
-            padding: 15px;
-            border-radius: 20px;
-            color: $white;
-        }
 
         .social-icons {
             @include flex-row;

@@ -1,5 +1,4 @@
 import { FC, ReactElement } from 'react';
-import { NavLink } from 'react-router-dom';
 // MUI icons
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -18,9 +17,9 @@ const TitleSection: FC = (): ReactElement => {
             <h5>We here to empower you to take full control of your productive time. </h5>
 
             <div className='navigation'>
-                <NavLink to={'/'}>
-                    <button>Let's help you out!</button>
-                </NavLink>
+                <a href="#form-section">
+                    <button className='action-button'>Let's help you out!</button>
+                </a>
                 <div className="vertical-line"></div>
                 <div className="social-icons">
                     <div>
@@ -36,7 +35,7 @@ const TitleSection: FC = (): ReactElement => {
             </div>
 
             <div className="navigation-down">
-                <a href="#form-section"><ArrowDownwardIcon/></a>
+                <a href="#form-section"><ArrowDownwardIcon /></a>
             </div>
 
         </div>

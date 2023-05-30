@@ -1,0 +1,58 @@
+@import '../../main.scss';
+
+.form-container {
+    width: 50%;
+    height: 90%;
+    padding: 30px;
+    // border: 10px solid $green;
+    border-radius: 50px;
+    font-family: $noto-font;
+    
+
+    .form-title {
+        h5 {
+            color: $green;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin-bottom: 20px;
+
+            &::selection {
+                color: $white;
+                background-color: $green;
+            }
+        }
+    }
+
+    .form {
+        width: 100%;
+        
+        
+        .double-input-container {
+            width: 100%;
+            @include flex-row;
+            gap: 30px;
+            margin-bottom: 5px;
+
+            * {
+                width: 100%;
+                margin-top: 5px;
+            }
+
+            fieldset {
+                display: flex;
+                
+            }
+        }
+
+        .fieldset-container {
+            margin-top: 20px;
+        }
+    }
+    
+    .form-btn {
+        margin-top: 30px;
+    }
+
+}

@@ -1,0 +1,20 @@
+@import '../../../main.scss';
+
+.input-field-container {
+    @include flex-row;
+    accent-color: $green;
+
+    input {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.underline {
+    
+    &:hover {
+        text-decoration: underline $green 2px;
+    }
+
+}
