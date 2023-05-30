@@ -1,0 +1,51 @@
+@import '../../main.scss';
+
+.circular-progress-container {
+    display: flex;
+    width: 300px;
+    height: 350px;
+    padding: 50px 0;
+    border-radius: 10px;
+    background-color: $white;
+    flex-direction: column;
+    align-items: center;
+
+
+    .circular-progress {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        @include flex-row;
+        justify-content: center;
+    }
+
+    .circular-progress::before {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: $white;
+        color: #ede8e8;
+        
+    }
+
+    .progress-value {
+        position: relative;
+        font-size: 20pt;
+    }
+
+    .progress-name {
+        margin-top: 20px;
+    }
+
+    .conditional-progress-phrase {
+        h6 {
+            padding-top: 20px;
+            color: $grey;
+        }
+    }
+
+}
+

@@ -1,0 +1,23 @@
+@import '../../../main.scss';
+
+.dashboard-section {
+    width: 80%;
+    padding: 50px;
+
+    .dashboard-title {
+        
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        h1 {
+            font-size: 26pt;
+            margin-bottom: 10px;
+        }
+    
+        span {
+            color: $green;
+            padding: 0 10px;
+        }
+    }
+}

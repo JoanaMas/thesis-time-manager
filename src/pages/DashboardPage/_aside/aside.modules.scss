@@ -1,0 +1,11 @@
+@import '../../../main.scss';
+
+aside {
+    width: 20%;
+    height: 95vh;
+    background-color: $green;
+    border-radius: 30px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}

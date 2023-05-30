@@ -4,6 +4,10 @@
     @include flex-row;
     accent-color: $green;
 
+    label {
+        text-align: center;
+    }
+
     input {
         display: block;
         width: 20px;

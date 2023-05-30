@@ -1,10 +1,16 @@
 import { FC, ReactElement } from 'react';
+import { useNavigate } from 'react-router-dom';
+// Routes
+import { routes } from '../../router/routes';
 // Components
 import InputField from './_inputField/InputField';
 // Style
 import './form.modules.scss';
 
 const Form: FC = (): ReactElement => {
+    const navigate = useNavigate();
+
+
     return (
         <div className="form-container">
 
@@ -72,7 +78,7 @@ const Form: FC = (): ReactElement => {
                             labelText='Hours For Other Activities'
                             inputType='number'
                             inputName='pagesWritten'
-                            inputId='pagesWritten'
+                            inputId='freeTime'
                             inputPlaceholder='Enter hours for free time...'
                         ></InputField>
                     </div>
@@ -126,7 +132,11 @@ const Form: FC = (): ReactElement => {
 
                     {/* FORM SUBMIT BUTTON */}
                     <div className='form-btn'>
-                        <button type="submit" className='action-button'>Create Your Dashboard!</button>
+                        <button 
+                        type="submit" 
+                        className='action-button'
+                        onClick={() => navigate(routes.dashboardPage)}
+                        >Create Your Dashboard!</button>
                     </div>
 
                 </form>
