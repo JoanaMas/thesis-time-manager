@@ -1,0 +1,28 @@
+@import '../../main.scss';
+
+.pages-stats-card-container {
+    width: 100px;
+    height: 150px;
+    border: 2px solid $green;
+    color: $green;
+    flex-grow: 1;
+    border-radius: 20px;
+
+    .page-progress {
+        height: 100%;
+        @include flex-column-center-y;
+        align-items: center;        
+    }
+
+    
+}
+
+.background-green {
+    background: linear-gradient(90deg, $green 20%, $vibrant-green 100%);;
+    border: none;
+    color: $white;
+
+    &:hover {
+        background: linear-gradient(150deg, $vibrant-green 20%, $green 100%,);
+    }
+}
