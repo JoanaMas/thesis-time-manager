@@ -1,7 +1,7 @@
 @import '../../../main.scss';
 
 aside {
-    width: 20%;
+    max-width: 200px;
     height: 95vh;
     background-color: $green;
     border-radius: 30px;
@@ -10,10 +10,10 @@ aside {
     justify-content: center;
 
     .productivity-stats-container {
+        @include flex-column-center;
         
 
         .greeting-container {
-            @include flex-column-center;
             gap: 15px;
             color: $white;
             padding: 10px;
@@ -21,18 +21,28 @@ aside {
 
             .icon {
                 * {
-                    font-size: 40pt;
+                    font-size: 30pt;
 
                     &:hover {
                         color: $yellow;
                     }
                 }
             }
+
+            .sub-heading {
+                margin-top: 20px;
+            }
+
+    
         }
 
 
         .daily-goals-container {
-            padding: 20px 0;
+            padding: 10px 0;
+        }
+
+        .save-pdf-container {
+            padding: 20px;
         }
     }
 }

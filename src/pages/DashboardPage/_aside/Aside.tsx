@@ -19,16 +19,16 @@ const Aside: FC = (): ReactElement => {
   const userData = useAppSelector(store => store.userData.userData);
   const pagesToWrite = useAppSelector(store => store.pages.pages);
   const productiveTime = useAppSelector(store => store.productivityTime.productivityTime);
-  
+
   // HOW MANY DAYS LEFT UNTIL DEADLINE
   const daysLeft = getDaysCount(userData.dueDate);
-  
+
   // HOW MANY PAGES PER DAY TO WRITE
   const pagesPerDay = countPagerPerDay(pagesToWrite, daysLeft);
 
 
   // Test
-  const [partOfTheDay, setPartOfTheDay] = useState('morning');
+  const [partOfTheDay, setPartOfTheDay] = useState('night');
 
 
   return (
@@ -47,12 +47,24 @@ const Aside: FC = (): ReactElement => {
             ? <h3>Good Morning, Early Bird!</h3>
             : <h3>Good Afternoon, Night Owl!</h3>
           }
+
+          <div className="sub-heading">
+            {partOfTheDay === 'morning'
+              ? <h6>We heard you love mornings, so we took care of your daily work schedule accordingly! </h6>
+              : <h6>We heard you love evenings, so we took care of your daily work schedule accordingly!</h6>
+            }
+          </div>
+
         </div>
 
         <div className="daily-goals-container">
-              <DailyGoalCard goalTitle='Daily Pages' goalCount={pagesPerDay.toString()}/>
-              <DailyGoalCard goalTitle='Days Left' goalCount={daysLeft.toString()}/>
-              <DailyGoalCard goalTitle='Recommended productive hours' goalCount={partOfTheDay === 'morning' ? `${8}-${8+productiveTime}` : `${12}-${12+productiveTime}`}/>
+          <DailyGoalCard goalTitle='Daily Pages' goalCount={pagesPerDay.toString()} />
+          <DailyGoalCard goalTitle='Days Left' goalCount={daysLeft.toString()} />
+          <DailyGoalCard goalTitle='Work Schedule' goalCount={partOfTheDay === 'morning' ? `${8}-${8 + productiveTime}h` : `${12}-${12 + productiveTime}h`} />
+        </div>
+
+        <div className="save-pdf-container">
+          <button className='action-button'>Save As PDF</button>
         </div>
 
       </div>

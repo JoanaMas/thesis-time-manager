@@ -1,4 +1,4 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactElement, useState } from 'react';
 // Redux
 import { useAppSelector, useAppDispatch } from '../../../redux/hooks';
 import { setPagesToWrite } from '../../../redux/features/pagesSlice';
@@ -11,25 +11,32 @@ import PagesStatsCard from '../../../components/pagesStatsCard/PagesStatsCard';
 import bussyWorkImage from '../../../assets/busy-work-illustration.jpg';
 import freeTimeImage from '../../../assets/free-time-illustration.jpg';
 import sleepImage from '../../../assets/sleep-illustration.jpg';
+// Interfaces
+import { IUserData } from '../../../redux/features/interfaces/UserDataInterface';
 // Helpers
 import { pagesToWrite } from '../../../helpers/pagesLeftToWriteCount';
 import { countProductiveTime } from '../../../helpers/productiveTimeCounters';
+import { getDataFromLocalStorage } from '../../../helpers/getDataFromLocalStorage';
 // Style
 import './dashboardSection.modules.scss';
 
 const DashboardSection: FC = (): ReactElement => {
 
+  const [userData] = useState<IUserData>(getDataFromLocalStorage);
+
   // STATES FROM REDUX
-  const fakeData = useAppSelector(store => store.userData.userData);
+  // const userData = useAppSelector(store => store.userData.userData);
   const pagesLeftToWrite = useAppSelector(store => store.pages.pages);
   const productiveTime = useAppSelector(store => store.productivityTime.productivityTime);
+
   const dispatch = useAppDispatch();
-  
+
   // SETTING AMOUNT OF PAGES TO WRITE IN ORDER TO COUNT HOW MANY PAGES PER DAY TO WRITE IN ASIDE COMPONENT
-  dispatch(setPagesToWrite(pagesToWrite(fakeData.totalPages, fakeData.pagesWritten)));
+  dispatch(setPagesToWrite(pagesToWrite(userData.totalPages, userData.pagesCompleted)));
 
   // SETTING PRODUCTIVITY TIME TO USE IN ASIDE COMPONENT IN ORDER TO CALCULATE RECOMMENDED PRODUCTIVITY HOURS
-  dispatch(setProductiveTime(countProductiveTime(fakeData.hoursForSleep, fakeData.freeHours)));
+  dispatch(setProductiveTime(countProductiveTime(userData.hoursForSleep, userData.freeHours)));
+
 
   return (
     <section className='dashboard-section'>
@@ -37,18 +44,18 @@ const DashboardSection: FC = (): ReactElement => {
       <div className="dashboard-title-progress-container">
 
         <div className='dashboard-left-side'>
-          <h1>Hello! <span>{fakeData.name}</span></h1>
+          <h1>Hello! <span>{userData.name}</span></h1>
           <h5>Never put off till tomorrow what can be done today!</h5>
 
           <div className='page-stats-container'>
-            <PagesStatsCard backgroundGreenClass='background-green' title='Pages Left To Write' pagesNumber={pagesLeftToWrite}/>
-            <PagesStatsCard title='Pages Written' pagesNumber={fakeData.pagesWritten}/>
-            <PagesStatsCard title='Total Pages' pagesNumber={fakeData.totalPages}/>
+            <PagesStatsCard backgroundGreenClass='background-green' title='Pages Left To Write' pagesNumber={pagesLeftToWrite} />
+            <PagesStatsCard title='Pages Written' pagesNumber={userData.pagesCompleted} />
+            <PagesStatsCard title='Total Pages' pagesNumber={userData.totalPages} />
           </div>
         </div>
 
         <div className='dashboard-right-side'>
-          <CircularProgressBar totalPages={fakeData.totalPages} pagesWritten={fakeData.pagesWritten} />
+          <CircularProgressBar totalPages={userData.totalPages} pagesWritten={userData.pagesCompleted} />
         </div>
 
 
@@ -66,14 +73,14 @@ const DashboardSection: FC = (): ReactElement => {
         <TimeStatsCard
           illustrationURL={freeTimeImage}
           heading={'Free Time'}
-          hours={fakeData.freeHours}
+          hours={userData.freeHours}
           description={'Leisure time is an important part of our mental health. Finding up to two hours of free time each day can significantly reduce stress and improve your general well-being.'}
         />
 
         <TimeStatsCard
           illustrationURL={sleepImage}
           heading={'Sleep Time'}
-          hours={fakeData.hoursForSleep}
+          hours={userData.hoursForSleep}
           description={'At least 7-8 hours of sleep is important for healthy brain function and emotional wellbeing, physical health, energy and appetite regulation, productivity and work performance.'}
         />
 

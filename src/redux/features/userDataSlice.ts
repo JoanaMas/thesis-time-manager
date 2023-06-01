@@ -1,26 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface UserData {
-    name: string;
-    totalPages: number;
-    pagesWritten: number;
-    hoursForSleep: number;
-    freeHours: number;
-    dueDate: Date;
-}
+// Interfaces
+import { IUserData } from './interfaces/UserDataInterface';
 
 interface InitialState {
-    userData: UserData;
+    userData: IUserData;
 }
 
 const initialState: InitialState = {
     userData: {
         name: 'Joana',
-        totalPages: 550,
-        pagesWritten: 300,
+        totalPages: 500,
+        pagesCompleted: 50,
         hoursForSleep: 7,
-        freeHours: 5,
-        dueDate: new Date(2023, 6, 1)
+        freeHours: 9,
+        dueDate: new Date(2023, 12, 3),
+        productivityPeak: 'morning',
+        weekendWork: 'on'
     }
 };
 
@@ -29,7 +24,7 @@ export const userDataSlice = createSlice({
     initialState,
 
     reducers: {
-        setUserData: (state, action: PayloadAction<UserData>) => {
+        setUserData: (state, action: PayloadAction<IUserData>) => {
             state.userData = action.payload;
         }
     }

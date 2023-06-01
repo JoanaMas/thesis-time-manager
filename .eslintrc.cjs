@@ -12,7 +12,7 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     'semi': ['error', 'always'],
     'quotes': ['error', 'single'],
-    'max-lines': ['error', { 'max': 200 }],
+    'max-lines': ['error', { 'max': 300 }],
     'object-curly-spacing': ['error', 'always'],
   },
 };

@@ -6,11 +6,8 @@ import './TimeStatsCard.modules.scss';
 interface TimeStatCardProps {
   illustrationURL: string;
   heading: string;
-  hours: number;
+  hours: number | undefined;
   description: string;
-
-
-
 }
 
 const TimeStatsCard: FC<TimeStatCardProps> = (props): ReactElement => {

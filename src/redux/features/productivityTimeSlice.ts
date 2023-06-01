@@ -9,7 +9,7 @@ const initialState: InitialState = {
 };
 
 export const productivityTimeSlice = createSlice({
-    name: 'producticityTime',
+    name: 'productivityTime',
     initialState,
   
     reducers: {
