@@ -3,12 +3,13 @@ import { FC, ReactElement } from 'react';
 import './container.modules.scss';
 
 interface ContainerProps {
+    className: string;
     children: React.ReactNode;
 }
 
-const Container: FC<ContainerProps> = ({ children }): ReactElement => {
+const Container: FC<ContainerProps> = ({ className, children }): ReactElement => {
   return (
-    <div className='container'>{children}</div>
+    <div className={`container ${className}`}>{children}</div>
   );
 };
 

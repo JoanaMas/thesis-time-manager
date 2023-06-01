@@ -20,6 +20,7 @@ import { getDataFromLocalStorage } from '../../../helpers/getDataFromLocalStorag
 // Style
 import './dashboardSection.modules.scss';
 
+
 const DashboardSection: FC = (): ReactElement => {
 
   const [userData] = useState<IUserData>(getDataFromLocalStorage);

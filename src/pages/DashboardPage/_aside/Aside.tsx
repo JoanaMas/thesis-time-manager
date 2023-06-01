@@ -12,8 +12,14 @@ import { countPagerPerDay } from '../../../helpers/pagesPerDayCounter';
 // Style
 import './aside.modules.scss';
 
+interface AsideProps {
+  loader: boolean;
+  onClick: VoidFunction;
+}
 
-const Aside: FC = (): ReactElement => {
+const Aside: FC<AsideProps> = (props): ReactElement => {
+
+  const { onClick, loader } = props;
 
   // USER DATA
   const userData = useAppSelector(store => store.userData.userData);
@@ -64,7 +70,7 @@ const Aside: FC = (): ReactElement => {
         </div>
 
         <div className="save-pdf-container">
-          <button className='action-button'>Save As PDF</button>
+          <button onClick={onClick} className='action-button' disabled={loader === true}>Save As PDF</button>
         </div>
 
       </div>
