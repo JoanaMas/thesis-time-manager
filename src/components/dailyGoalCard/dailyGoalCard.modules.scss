@@ -1,0 +1,25 @@
+@import '../../main.scss';
+
+.daily-goal-card-container {
+    color: $white;
+    @include flex-column-center;
+    gap: 15px;
+    padding: 10px;
+
+    h6 {
+        text-align: center;
+    }
+
+
+    .circle-container {
+        width: 80px;
+        height: 80px;
+        border: 5px solid $white;
+        border-radius: 50%;
+        @include grid-center;
+
+        span {
+            font-size: 20pt;
+        }
+    }
+}

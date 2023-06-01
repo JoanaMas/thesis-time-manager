@@ -8,4 +8,31 @@ aside {
     padding: 20px 0;
     display: flex;
     justify-content: center;
+
+    .productivity-stats-container {
+        
+
+        .greeting-container {
+            @include flex-column-center;
+            gap: 15px;
+            color: $white;
+            padding: 10px;
+            text-align: center;
+
+            .icon {
+                * {
+                    font-size: 40pt;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+
+
+        .daily-goals-container {
+            padding: 20px 0;
+        }
+    }
 }

@@ -11,7 +11,7 @@ const Dashboard: FC = (): ReactElement => {
     <Container>
       <main>
         
-        <Aside/>
+        <Aside />
         <DashboardSection />
         
       </main>

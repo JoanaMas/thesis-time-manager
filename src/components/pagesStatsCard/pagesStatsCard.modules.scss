@@ -11,7 +11,11 @@
     .page-progress {
         height: 100%;
         @include flex-column-center-y;
-        align-items: center;        
+        align-items: center; 
+        
+        h6 {
+            text-align: center;
+        }
     }
 
     
