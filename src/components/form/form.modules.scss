@@ -48,6 +48,25 @@
 
         .fieldset-container {
             margin-top: 20px;
+
+            fieldset {
+                height: 80px;
+                font-size: 8pt;
+
+                legend {
+                    font-size: 14pt;
+                }
+
+                .radio-input-container {
+                    @include flex-row-center;
+
+                    input {
+                        accent-color: $green;
+                    }
+                }
+
+    
+            }
         }
     }
     

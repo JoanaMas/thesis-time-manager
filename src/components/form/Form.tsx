@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { routes } from '../../router/routes';
 // Components
 import InputField from './_inputField/InputField';
+// Helpers
+import { getCurrentDay } from '../../helpers/getCurrentDay';
 // Style
 import './form.modules.scss';
 
@@ -26,7 +28,7 @@ const Form: FC = (): ReactElement => {
             sleepHours: { value: number };
             freeTime: { value: number };
         };
-        
+
         const userInputData = {
             name: name.value,
             dueDate: new Date(date.value),
@@ -70,6 +72,7 @@ const Form: FC = (): ReactElement => {
                             inputType='date'
                             inputName='date'
                             inputId='date'
+                            min={getCurrentDay()}
                             required
                         ></InputField>
                     </div>
@@ -132,57 +135,29 @@ const Form: FC = (): ReactElement => {
                         <fieldset>
                             <legend>Productivity Peak</legend>
 
-                            {/* <InputField
-                                labelFor='morning'
-                                labelText='Morning Person'
-                                inputType='radio'
-                                inputName='productivity'
-                                inputId='morning'
-                                inputValue='morning'
-                                onChange={(e) => setCheckedValue(e.target.value)}
-                                required
-                            ></InputField> */}
-
-                            <input type="radio" name="productivityTime" value="morning" onChange={(e) => setProductivityTimeValue(e.target.value)} /> Morning
-                            <input type="radio" name="productivityTime" value="night" onChange={(e) => setProductivityTimeValue(e.target.value)} /> Night
-
-                            {/* <InputField
-                                labelFor='night'
-                                labelText='Night Person'
-                                inputType='radio'
-                                inputName='productivity'
-                                inputId='night'
-                                inputValue='night'
-                                onChange={(e) => setCheckedValue(e.target.value)}
-                                required
-                            ></InputField> */}
+                            <div className="radio-input-container">
+                                <input type="radio" name="productivityTime" value="morning" onChange={(e) => setProductivityTimeValue(e.target.value)} />
+                                <span>Morning</span>
+                            </div>
+                            <div className="radio-input-container">
+                                <input type="radio" name="productivityTime" value="night" onChange={(e) => setProductivityTimeValue(e.target.value)} />
+                                <span>Night</span>
+                            </div>
 
                         </fieldset>
+
                         <fieldset>
                             <legend>Work On Weekends</legend>
-                            {/* <InputField
-                                labelFor='on'
-                                labelText='Count me in!'
-                                inputType='radio'
-                                inputName='WeekendWork'
-                                inputId='on'
-                                inputValue='on'
-                                required
-                            ></InputField> */}
 
-                            <input type="radio" name="weekendOff" value="on" onChange={(e) => setWeekendOfValue(e.target.value)} /> Count me in!
-                            <input type="radio" name="weekendOff" value="off" onChange={(e) => setWeekendOfValue(e.target.value)} /> Definitely not!
+                            <div className="radio-input-container">
+                                <input type="radio" name="weekendOff" value="on" onChange={(e) => setWeekendOfValue(e.target.value)} />
+                                <span>Count me in!</span>
+                            </div>
+                            <div className="radio-input-container">
+                                <input type="radio" name="weekendOff" value="off" onChange={(e) => setWeekendOfValue(e.target.value)} />
+                                <span>Definitely not!</span>
+                            </div>
 
-
-                            {/* <InputField
-                                labelFor='off'
-                                labelText='Definitely not!'
-                                inputType='radio'
-                                inputName='WeekendWork'
-                                inputId='off'
-                                inputValue='off'
-                                required
-                            ></InputField> */}
                         </fieldset>
 
 

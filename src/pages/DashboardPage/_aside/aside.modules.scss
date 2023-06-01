@@ -6,12 +6,35 @@ aside {
     background-color: $green;
     border-radius: 30px;
     padding: 20px 0;
-    display: flex;
-    justify-content: center;
+    @include flex-row;
 
     .productivity-stats-container {
         @include flex-column-center;
-        
+        color: $white;
+        text-align: center;
+        padding: 10px;
+
+        .weekend-greeting-container {
+            @include flex-column-center;
+
+            h3 {
+                width: 60%;
+                padding-bottom: 20px;
+            };
+
+            h6 {
+                background-color: $yellow;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            
+            .icon-weekend {
+                * {
+                    font-size: 40pt;
+                    color: $white;
+                }
+            }
+        }
 
         .greeting-container {
             gap: 15px;

@@ -32,11 +32,13 @@
         .social-icons {
             @include flex-row;
             gap: 20px;
-            color: $grey;
-
-            * {
-                &:hover {
-                    color: $green;
+            
+            a {
+                color: $grey;
+                * {
+                    &:hover {
+                        color: $green;
+                    }
                 }
             }
         }
@@ -54,11 +56,9 @@
     @keyframes jumpInfinite {
         0% {
           padding-top: 0;
-          color: $black;
         }
         100% {
           padding-top: 100px;
-          color: $purple;
         }
       }
     

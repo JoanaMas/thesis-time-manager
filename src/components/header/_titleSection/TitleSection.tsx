@@ -23,13 +23,14 @@ const TitleSection: FC = (): ReactElement => {
                 <div className="vertical-line"></div>
                 <div className="social-icons">
                     <div>
-                        <FacebookOutlinedIcon />
+                        <a href="https://www.facebook.com" target="_blank"><FacebookOutlinedIcon /></a>
                     </div>
                     <div>
-                        <InstagramIcon />
+                        <a href="https://www.instagram.com" target="_blank"><InstagramIcon /></a>
                     </div>
                     <div>
-                        <TwitterIcon />
+                        <a href="https://twitter.com" target="_blank"><TwitterIcon /></a>
+
                     </div>
                 </div>
             </div>

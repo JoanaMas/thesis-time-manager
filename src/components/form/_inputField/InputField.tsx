@@ -11,8 +11,8 @@ interface InputFieldProps {
     inputValue?: string;
     inputPlaceholder?: string;
     checked?: boolean;
-    max?: number;
-    min?: number;
+    max?: number | string;
+    min?: number | string;
     required?: boolean;
 }
 
