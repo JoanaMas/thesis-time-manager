@@ -7,7 +7,7 @@
     // border: 10px solid $green;
     border-radius: 50px;
     font-family: $noto-font;
-    
+    @include flex-row;
 
     .form-title {
         h5 {
@@ -51,10 +51,11 @@
 
             fieldset {
                 height: 80px;
-                font-size: 8pt;
-
+                font-size: 10pt;
+                border: 2px solid $purple;
+                
                 legend {
-                    font-size: 14pt;
+                    font-size: 12pt;
                 }
 
                 .radio-input-container {
@@ -62,6 +63,10 @@
 
                     input {
                         accent-color: $green;
+                    }
+
+                    span {
+                        text-align: center;
                     }
                 }
 
