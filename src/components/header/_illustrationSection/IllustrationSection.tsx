@@ -19,6 +19,7 @@ const IllustrationSection: FC = (): ReactElement => {
                 </div>
             </div>
 
+            <div>
             <AbstractFigure
                 width={abstractFigureEnums.WidthEnum.w200}
                 height={abstractFigureEnums.HeightEnum.h200}
@@ -53,7 +54,7 @@ const IllustrationSection: FC = (): ReactElement => {
                 width={abstractFigureEnums.WidthEnum.w300}
                 height={abstractFigureEnums.HeightEnum.h400}
                 backgroundColor={abstractFigureEnums.BackgroundColorEnum.pink}
-                opacity={abstractFigureEnums.OpacityEnum.opacity1}
+                opacity={abstractFigureEnums.OpacityEnum.opacity75}
                 zIndex={abstractFigureEnums.ZindexEnum.index0}
                 top={250}
                 right={50}
@@ -68,6 +69,8 @@ const IllustrationSection: FC = (): ReactElement => {
                 top={100}
                 right={500}
             />
+
+            </div>
         </div>
     );
 };

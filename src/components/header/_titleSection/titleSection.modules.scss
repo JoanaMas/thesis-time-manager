@@ -1,0 +1,98 @@
+@import '../../../main.scss';
+
+.title {
+    width: 100%;
+    align-self: center;
+    padding: 60px;
+    font-family: $prata-font;
+
+    @include small-screen {
+        width: 50%;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 25pt;
+        margin-bottom: 20px;
+
+        @include medium-screen {
+            font-size: 35pt;
+        }
+
+        @include large-screen {
+            font-size: 40pt;
+        }
+
+        span {
+            background-color: $green;
+            color: $white;
+        }
+
+        &::selection {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    h5 {
+        margin-bottom: 30px;
+    }
+
+    .navigation-container {
+        @include flex-column-center-y;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 10px;
+
+        @include medium-screen {
+            @include flex-row;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
+
+        .vertical-line {
+            display: none;
+
+            @include medium-screen {
+                display: flex;
+            }
+        }
+
+        .social-icons {
+            @include flex-row;
+            gap: 20px;
+            padding-left: 15px;
+
+            @include medium-screen {
+                padding-left: 0;
+            }
+
+            a {
+                color: $grey;
+                * {
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigation-down {
+        padding-top: 100px;
+        animation: jumpInfinite 1.5s 1 ease-in-out;
+
+        * {
+            color: $purple;
+        }
+    }
+
+    @keyframes jumpInfinite {
+        0% {
+            padding-top: 0;
+        }
+        100% {
+            padding-top: 100px;
+        }
+    }
+}

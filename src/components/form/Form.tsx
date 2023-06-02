@@ -47,7 +47,7 @@ const Form: FC = (): ReactElement => {
 
     return (
         <div className="form-container">
-            <div className="form">
+            <div className="form z-index-5">
                 <div className="form-title">
                     <h5>Tell us more</h5>
                     <h2>Your progress & working style</h2>

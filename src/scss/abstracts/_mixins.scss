@@ -2,6 +2,7 @@
 
 @mixin flex-row {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -58,3 +59,34 @@
     -webkit-box-shadow: 4px 4px 21px -7px rgba(0, 0, 0, 0.71);
     -moz-box-shadow: 4px 4px 21px -7px rgba(0, 0, 0, 0.71);
 }
+
+
+// Breakpoints
+
+@mixin extra-small-screen {
+    @media (min-width: $screen-xs) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media (min-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin medium-screen {
+    @media (min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media (min-width: $screen-lg) {
+        @content;
+    }
+}
+
+
+
+

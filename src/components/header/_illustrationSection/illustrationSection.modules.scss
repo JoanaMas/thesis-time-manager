@@ -21,6 +21,14 @@
             @include hover-shadow;
         }
 
+        @include extra-small-screen {
+            display: none;
+        }
+
+        @include small-screen {
+            display: flex;
+        }
+
         .sub-title-container {
             position: absolute;
             top: 420px;
@@ -30,7 +38,6 @@
                 text-align: center;
                 font-weight: 400;
                 padding: 20px 0;
-    
             }
 
             span * {
@@ -39,5 +46,4 @@
             }
         }
     }
-
 }

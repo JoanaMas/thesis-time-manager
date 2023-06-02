@@ -38,7 +38,7 @@ const Aside: FC<AsideProps> = (props): ReactElement => {
   const pagesPerDay = countPagerPerDay(pagesToWrite, daysLeft);
 
   // TODAY'S DATE TO CHECK IF TODAY IS WEEKEND - enter upcoming weekend date inside new Date(yyyy-m-d) to check UI. (Months starts from 0 to 11).
-  const today = new Date();
+  const today = new Date(2023, 5, 4);
 
 
   return (
