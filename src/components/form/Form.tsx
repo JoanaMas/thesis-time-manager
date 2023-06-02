@@ -168,7 +168,6 @@ const Form: FC = (): ReactElement => {
                         <button
                             type='submit'
                             className='action-button'
-                        // onClick={() => navigate(routes.dashboardPage)}
                         >Create Your Dashboard!</button>
                     </div>
 
