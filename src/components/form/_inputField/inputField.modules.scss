@@ -2,7 +2,6 @@
 
 .input-field-container {
     @include flex-row;
-    accent-color: $green;
 
     label {
         text-align: center;

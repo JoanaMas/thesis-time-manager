@@ -2,32 +2,38 @@
 
 .pages-stats-card-container {
     width: 150px;
-    height: 200px;
+    height: 120px;
     border: 2px solid $green;
     color: $green;
     flex-grow: 1;
     border-radius: 20px;
 
+    @include small-screen {
+        height: 200px;
+    }
+
     .page-progress {
         height: 100%;
         @include flex-column-center-y;
-        align-items: center; 
-        
+        align-items: center;
+
         h6 {
             text-align: center;
-            font-size: 10pt;
+            font-size: 6pt;
+
+            @include small-screen {
+                font-size: 10pt;
+            }
         }
     }
-
-    
 }
 
 .background-green {
-    background: linear-gradient(90deg, $green 20%, $vibrant-green 100%);;
+    background: linear-gradient(90deg, $green 20%, $vibrant-green 100%);
     border: none;
     color: $white;
 
     &:hover {
-        background: linear-gradient(150deg, $vibrant-green 20%, $green 100%,);
+        background: linear-gradient(150deg, $vibrant-green 20%, $green 100%);
     }
 }

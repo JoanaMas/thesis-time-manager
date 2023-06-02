@@ -1,14 +1,20 @@
 @import '../../main.scss';
 
 .circular-progress-container {
-    display: flex;
-    width: 300px;
-    height: 350px;
-    padding: 50px 0;
+    @include flex-row-center;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     background-color: $white;
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    padding-bottom: 20px;
+
+    @include medium-screen {
+        width: 300px;
+        height: 350px;
+        flex-direction: column;
+    }
 
     span {
         color: $green;
@@ -16,38 +22,65 @@
 
     .circular-progress {
         position: relative;
-        width: 150px;
-        height: 150px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         @include flex-row;
         justify-content: center;
+
+        @include medium-screen {
+            width: 150px;
+            height: 150px;
+        }
     }
 
     .circular-progress::before {
-        content: "";
+        content: '';
         position: absolute;
-        width: 120px;
-        height: 120px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         background-color: $white;
         color: #ede8e8;
-        
+
+        @include medium-screen {
+            width: 120px;
+            height: 120px;
+        }
     }
 
     .progress-value {
         position: relative;
-        font-size: 20pt;
+        font-size: 10pt;
+
+        @include medium-screen {
+            font-size: 20pt;
+        }
     }
 
-    .progress-name {
-        margin-top: 20px;
-    }
+    .progress-phrase-container {
+        @include medium-screen {
+            @include grid-center;
+        }
 
-    .conditional-progress-phrase {
-        h6 {
-            padding-top: 20px;
-            color: $grey;
+        .progress-name {
+            margin-top: 20px;
+        }
+    
+        .conditional-progress-phrase {
+            text-align: center;
+    
+            h6 {
+                font-size: 6pt;
+                padding-top: 5px;
+    
+                color: $grey;
+    
+                @include medium-screen {
+                    padding-top: 20px;
+                    font-size: 8pt;
+                }
+            }
         }
     }
 }
-

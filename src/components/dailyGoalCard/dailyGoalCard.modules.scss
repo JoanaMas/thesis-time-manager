@@ -12,11 +12,16 @@
 
 
     .circle-container {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border: 5px solid $white;
         border-radius: 50%;
         @include grid-center;
+
+        @include small-screen {
+            width: 80px;
+            height: 80px;
+        }
 
         &:hover {
             border: 5px solid $green;
@@ -25,7 +30,11 @@
         }
 
         span {
-            font-size: 14pt;
+            font-size: 10pt;
+
+            @include small-screen {
+                font-size: 14pt;
+            }
         }
     }
 }

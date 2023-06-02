@@ -4,24 +4,41 @@
     width: 80%;
     height: 100%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    @include flex-column-center-y;
+    justify-content: center;
+    gap: 20px;
 
     .dashboard-title-progress-container {
-        max-height: 400px;
-        overflow: scroll;
+        height: 400px;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-items: center;
         gap: 20px;
 
+        @include small-screen {
+            margin-bottom: 50px;
+        }
+
+        @include medium-screen {
+            flex-direction: row;
+            align-items: flex-end;
+            margin-bottom: 0;
+        }
+
+        // LEFT SIDE
         .dashboard-left-side {
-            flex-grow: 1;
+            width: 100%;
+            // flex-grow: 1;
+
+            @include medium-screen {
+                width: 60%;
+            }
             h1 {
                 font-size: 26pt;
                 margin-bottom: 10px;
             }
-    
+
             span {
                 color: $green;
                 padding: 0 10px;
@@ -30,24 +47,39 @@
             h5 {
                 padding-bottom: 25px;
             }
-    
+
             .page-stats-container {
+                width: 100%;
                 @include flex-row;
+                justify-content: center;
                 gap: 15px;
-                height: 250px;
+                height: auto;
                 background-color: $white;
                 padding: 20px;
                 border-radius: 10px;
                 justify-content: space-between;
             }
         }
+
+        // RIGHT SIDE
+        .dashboard-right-side {
+            @include grid-center;
+        }
     }
 
     .time-stats-container {
-        width: 100%;
-        height: 300px;
-        @include flex-row;
-        justify-content: space-between;
+        height: 400px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
         gap: 15px;
+
+        @include medium-screen {
+            width: 100%;
+            height: 300px;
+            @include flex-row;
+            justify-content: space-between;
+        }
     }
 }

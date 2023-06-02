@@ -10,7 +10,6 @@ interface InputFieldProps {
     inputId?: string;
     inputValue?: string;
     inputPlaceholder?: string;
-    checked?: boolean;
     max?: number | string;
     min?: number | string;
     required?: boolean;
@@ -26,7 +25,6 @@ const InputField: FC<InputFieldProps> = (props): ReactElement => {
         inputId,
         inputValue,
         inputPlaceholder,
-        checked,
         max,
         min,
         required,
@@ -35,7 +33,7 @@ const InputField: FC<InputFieldProps> = (props): ReactElement => {
     return (
         <div className={inputType === 'radio' ? 'input-field-container' : ''}>
             <label className='underline' htmlFor={labelFor}>{labelText}</label>
-            <input type={inputType} name={inputName} id={inputId} placeholder={inputPlaceholder} value={inputValue} checked={checked} min={min} max={max} required={required}/>
+            <input type={inputType} name={inputName} id={inputId} placeholder={inputPlaceholder} value={inputValue} min={min} max={max} required={required}/>
         </div>
     );
 };

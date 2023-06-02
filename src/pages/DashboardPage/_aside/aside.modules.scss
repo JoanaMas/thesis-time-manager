@@ -14,6 +14,7 @@ aside {
         text-align: center;
         padding: 10px;
 
+
         .weekend-greeting-container {
             @include flex-column-center;
 
@@ -42,12 +43,17 @@ aside {
             padding: 10px;
             text-align: center;
 
+
             .icon {
                 * {
                     font-size: 30pt;
 
                     &:hover {
                         color: $yellow;
+                    }
+
+                    @include extra-small-screen {
+                        font-size: 25pt;
                     }
                 }
             }
