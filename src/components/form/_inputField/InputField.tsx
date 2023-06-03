@@ -32,7 +32,7 @@ const InputField: FC<InputFieldProps> = (props): ReactElement => {
 
     return (
         <div className={inputType === 'radio' ? 'input-field-container' : ''}>
-            <label className='underline' htmlFor={labelFor}>{labelText}</label>
+            <label className='input' htmlFor={labelFor}>{labelText}</label>
             <input type={inputType} name={inputName} id={inputId} placeholder={inputPlaceholder} value={inputValue} min={min} max={max} required={required}/>
         </div>
     );

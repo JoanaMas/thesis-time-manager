@@ -50,7 +50,7 @@ const DashboardSection: FC = (): ReactElement => {
 
           <div className='page-stats-container'>
             <PagesStatsCard backgroundGreenClass='background-green' title='Pages Left To Write' pagesNumber={pagesLeftToWrite} />
-            <PagesStatsCard title='Pages Written' pagesNumber={userData.pagesCompleted} />
+            <PagesStatsCard title='Completed Pages' pagesNumber={userData.pagesCompleted} />
             <PagesStatsCard title='Total Pages' pagesNumber={userData.totalPages} />
           </div>
         </div>

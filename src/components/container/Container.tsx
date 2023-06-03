@@ -3,7 +3,7 @@ import { FC, ReactElement } from 'react';
 import './container.modules.scss';
 
 interface ContainerProps {
-    className: string;
+    className?: string;
     children: React.ReactNode;
 }
 

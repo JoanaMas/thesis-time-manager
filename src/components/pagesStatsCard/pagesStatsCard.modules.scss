@@ -17,6 +17,15 @@
         @include flex-column-center-y;
         align-items: center;
 
+        h3 {
+            font-size: 18pt;
+            padding-bottom: 5px;
+
+            @include small-screen {
+                font-size: 30pt;
+            }
+        }
+
         h6 {
             text-align: center;
             font-size: 6pt;

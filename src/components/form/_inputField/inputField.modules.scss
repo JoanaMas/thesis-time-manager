@@ -14,7 +14,8 @@
     }
 }
 
-.underline {
+.input {
+    font-size: 10pt;
     
     &:hover {
         text-decoration: underline $green 2px;

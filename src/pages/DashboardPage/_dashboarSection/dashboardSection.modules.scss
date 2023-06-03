@@ -21,18 +21,19 @@
         }
 
         @include medium-screen {
-            flex-direction: row;
+            flex-direction: row-reverse;
             align-items: flex-end;
+            justify-content: flex-end;
             margin-bottom: 0;
         }
 
         // LEFT SIDE
         .dashboard-left-side {
             width: 100%;
-            // flex-grow: 1;
 
             @include medium-screen {
                 width: 60%;
+                flex-grow: 1;
             }
             h1 {
                 font-size: 26pt;
@@ -69,17 +70,16 @@
 
     .time-stats-container {
         height: 400px;
-        padding: 10px;
         display: flex;
         flex-direction: column;
         overflow: scroll;
         gap: 15px;
+        
 
         @include medium-screen {
             width: 100%;
             height: 300px;
-            @include flex-row;
-            justify-content: space-between;
+            @include flex-row;    
         }
     }
 }

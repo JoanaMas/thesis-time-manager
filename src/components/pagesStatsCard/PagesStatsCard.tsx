@@ -16,7 +16,7 @@ const PagesStatsCard: FC<PagesStatsCardProps> = (props): ReactElement => {
     return (
         <div className={`pages-stats-card-container ${backgroundGreenClass}`}>
             <div className="page-progress">
-                <h3 className='number'>{pagesNumber}</h3>
+                <h3>{pagesNumber}</h3>
                 <h6>{title}</h6>
             </div>
         </div>

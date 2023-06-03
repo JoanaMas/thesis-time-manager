@@ -2,7 +2,7 @@ import { createBrowserRouter, Form } from 'react-router-dom';
 // Pages
 import HomePage from '../pages/HomePage/HomePage';
 import Dashboard from '../pages/DashboardPage/Dashboard';
-import BlogPage from '../pages/BlogPage';
+import BlogPage from '../pages/BlogPage/BlogPage';
 import Layout from '../pages/Layout';
 // Routes
 import { routes } from './routes';

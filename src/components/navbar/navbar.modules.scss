@@ -6,4 +6,5 @@ nav {
     padding: 50px;
     background-color: $bg-color;
     @include flex-row;
+    z-index: 10;
 }
