@@ -16,13 +16,10 @@
         background-position: 45% 20%;
         position: relative;
         z-index: 1;
+        display: none;
 
         &:hover {
             @include hover-shadow;
-        }
-
-        @include extra-small-screen {
-            display: none;
         }
 
         @include small-screen {
@@ -43,6 +40,7 @@
             span * {
                 font-size: 25pt;
                 color: $purple;
+                cursor: pointer;
             }
         }
     }

@@ -89,7 +89,7 @@ const Aside: FC<AsideProps> = (props): ReactElement => {
         </div>
 
         <div className="save-pdf-container">
-          <button onClick={onClick} className='action-button' disabled={loader === true}>Save As PDF</button>
+          <button onClick={onClick} className='action-button' disabled={loader === true}>Save as PDF</button>
         </div>
 
       </div>
