@@ -4,8 +4,7 @@
     min-width: 250px;
     min-height: 300px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 10px;
 
     @include extra-small-screen {
@@ -26,8 +25,7 @@
 
 .image {
     height: 200px;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 20px;
 
     img {

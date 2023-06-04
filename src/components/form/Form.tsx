@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { routes } from '../../router/routes';
 // Components
 import InputField from './_inputField/InputField';
+import RadioField from './_radioField/RadioField';
 // Helpers
 import { getCurrentDay } from '../../helpers/getCurrentDay';
 // Style
@@ -132,31 +133,41 @@ const Form: FC = (): ReactElement => {
                     </div>
 
                     <div className='double-input-container fieldset-container'>
+
                         <fieldset>
                             <legend>Productivity Peak</legend>
 
-                            <div className="radio-input-container">
-                                <input type="radio" name="productivityTime" value="morning" onChange={(e) => setProductivityTimeValue(e.target.value)} />
-                                <span>Morning</span>
-                            </div>
-                            <div className="radio-input-container">
-                                <input type="radio" name="productivityTime" value="night" onChange={(e) => setProductivityTimeValue(e.target.value)} />
-                                <span>Night</span>
-                            </div>
+                            <RadioField
+                                radioName='productivityTime'
+                                radioValue='morning'
+                                onChange={(e) => setProductivityTimeValue(e.target.value)}
+                                label={'Morning'}
+                            />
+                            <RadioField
+                                radioName='productivityTime'
+                                radioValue='night'
+                                onChange={(e) => setProductivityTimeValue(e.target.value)}
+                                label={'Night'}
+                            />
 
                         </fieldset>
 
                         <fieldset>
                             <legend>Work On Weekends</legend>
 
-                            <div className="radio-input-container">
-                                <input type="radio" name="weekendOff" value="on" onChange={(e) => setWeekendOfValue(e.target.value)} />
-                                <span>Count me in!</span>
-                            </div>
-                            <div className="radio-input-container">
-                                <input type="radio" name="weekendOff" value="off" onChange={(e) => setWeekendOfValue(e.target.value)} />
-                                <span>Definitely not!</span>
-                            </div>
+                            <RadioField
+                                radioName='weekendOff'
+                                radioValue='on'
+                                onChange={(e) => setWeekendOfValue(e.target.value)}
+                                label={'Count me in!'}
+                            />
+
+                            <RadioField
+                                radioName='weekendOff'
+                                radioValue='off'
+                                onChange={(e) => setWeekendOfValue(e.target.value)}
+                                label={'Definitely not!'}
+                            />
 
                         </fieldset>
 

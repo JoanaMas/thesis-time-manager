@@ -70,17 +70,6 @@
                     font-size: 12pt;
                 }
 
-                .radio-input-container {
-                    @include flex-row-center;
-
-                    input {
-                        accent-color: $green;
-                    }
-
-                    span {
-                        text-align: center;
-                    }
-                }
             }
         }
     }

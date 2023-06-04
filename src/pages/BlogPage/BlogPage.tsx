@@ -87,7 +87,6 @@ const BlogPage: FC = (): ReactElement => {
               linkURL='https://www.forbes.com/sites/ilyapozin/2013/08/14/9-habits-of-productive-people/'
             />
 
-
           </div>
         </div>
 

@@ -1,0 +1,13 @@
+@import '../../../main.scss';
+
+.radio-input-container {
+    @include flex-row-center;
+
+    input {
+        accent-color: $green;
+    }
+
+    span {
+        text-align: center;
+    }
+}
