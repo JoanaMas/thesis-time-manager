@@ -29,7 +29,7 @@ Moreover, this project provided an excellent opportunity to gain proficiency in 
   * In case it is a weekend day, and the user selects preference to not work on weekends, the application displays different greetings showing 'Weekend Mode On'. In case you will use application not on a weekend day, you can see what program would display if you would use it on weekends with selection of weekend mode on here: 
   <br><br>
   
-  ![Example](../../Info/thesis-time-manager/thesis-time-manager/src/assets/work-off-weekends.png)
+  ![Example](./src/assets/work-off-weekends.png)
 
 
 <br>
@@ -38,7 +38,7 @@ Moreover, this project provided an excellent opportunity to gain proficiency in 
 
 <br>
 
-![](./thesis-time-manager/src/assets/thesis-manager-gif.gif)
+![](./src/assets/thesis-manager-gif.gif)
 
 <br>
 
@@ -87,7 +87,7 @@ npm run dev
 
 4. Copy project URL given in an integrated terminal to your browser. Recommended browser - Chrome.<br><br>
 
-*Note: [video](./thesis-time-manager/src/assets/how-to-launch-project-video.mp4) added to show how to launch a project*<br><br>
+*Note: [video](./src/assets/how-to-launch-project-video.mp4) added to show how to launch a project*<br><br>
 
 # View code:
 
