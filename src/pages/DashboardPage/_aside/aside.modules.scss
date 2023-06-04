@@ -71,7 +71,12 @@ aside {
         }
 
         .save-pdf-container {
-            padding: 20px;
+            .small-btn {
+                width: 100%;
+                height: 40px;
+                font-size: 8pt;
+                @include flex-column-center;
+            }
         }
     }
 }
