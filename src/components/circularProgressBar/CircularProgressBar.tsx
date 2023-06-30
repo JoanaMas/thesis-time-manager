@@ -45,17 +45,16 @@ const CircularProgressBar: FC<CircularProgressBarProps> = (props): ReactElement 
             >
                 <span className="progress-value">{`${progressValue}%`}</span>
             </div>
-            
+
             <div className="progress-phrase-container">
-            <span className='progress-name'>Progress</span>
+                <span className='progress-name'>Progress</span>
 
-            <div className="conditional-progress-phrase">
-                {progressValue < 50
-                    ? <h6>Great start!</h6>
-                    : <h6>Keep up good work! You are almost there...</h6>
-                }
-            </div>
-
+                <div className="conditional-progress-phrase">
+                    {progressValue < 50
+                        ? <h6>Great start!</h6>
+                        : <h6>Keep up good work! You are almost there...</h6>
+                    }
+                </div>
             </div>
 
         </div>
